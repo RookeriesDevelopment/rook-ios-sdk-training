@@ -13,20 +13,13 @@ let package = Package(
   products: [
     .library(
       name: "RookTrainingSDK",
-      targets: ["RookTrainingSDK"]),
+      targets: ["RookMotionSDK"]),
   ],
   
   dependencies: [
   ],
   
   targets: [
-    
-    .target(name: "RookTrainingSDK",
-            dependencies: ["RookMotionSDK"],
-            cxxSettings: [
-              .headerSearchPath("include")
-            ]
-           ),
     .binaryTarget(name: "RookMotionSDK",
                   path: "./Sources/RookMotionSDK.xcframework")
   ]
