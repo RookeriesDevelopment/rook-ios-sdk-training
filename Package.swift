@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "RookMotionSDK",
+  name: "RookTrainingSDK",
   
   platforms: [
     .iOS(.v13)
@@ -12,8 +12,8 @@ let package = Package(
   
   products: [
     .library(
-      name: "RookMotionSDK",
-      targets: ["RookMotionSDK"]),
+      name: "RookTrainingSDK",
+      targets: ["RookTrainingSDK"]),
   ],
   
   dependencies: [
@@ -21,6 +21,12 @@ let package = Package(
   
   targets: [
     
+    .target(name: "RookTrainingSDK",
+            dependencies: ["RookMotionSDK"],
+            cxxSettings: [
+              .headerSearchPath("include")
+            ]
+           ),
     .binaryTarget(name: "RookMotionSDK",
                   path: "./Sources/RookMotionSDK.xcframework")
   ]
