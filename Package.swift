@@ -22,6 +22,6 @@ let package = Package(
   targets: [
     
     .binaryTarget(name: "RookMotionSDK",
-                  path: "./Sources/RookMotionSDK.xcframework"),
+                  path: "./Sources/RookMotionSDK.xcframework")
   ]
 )
